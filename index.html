@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="to-do-list.js"></script>
+    <link rel="stylesheet" href="styles.css" type="text/css" media="all">
+    <style type="text/css">
+        input[type='submit'], button {
+            cursor: pointer;
+        }
+        #vista {
+            display:none
+        }
+           
+    </style>
+    <title>TO DO LIST</title>
+</head>
+
+<body>
+   <div class ="container">
+       <p>✍️to do list tool</p>
+   <form action="javascript:void(0);" method="post" onsubmit="app.Add()">
+    <div class="container__input">
+        <input type="text" id="add-task" placeholder="task">
+        <input class="btn__add" type="submit" value="Add">
+    </div>
+   </form>
+
+   <div id="vista">
+    <form action="javascript:void(0);" method="post" id="saveEdit">
+        <input type="text" id="edit-task">
+        <input type="submit" value="Edit"> <a onclick="CloseInput()">&#10006;</a>
+    </form>
+   </div>
+   <div class="counter__style">
+   <p id="counter"></p>
+   </div>
+   <div class="th__style">
+       <p>tasks on your list</p>
+   </div>
+   <table>
+       <tr>
+       
+       </tr>
+       <tbody id="tasks">      
+       </tbody>
+   </table>
+   </div>
+
+</body>
+
+</html>
